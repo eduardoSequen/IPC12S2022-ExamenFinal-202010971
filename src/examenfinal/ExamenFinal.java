@@ -74,15 +74,16 @@ public class ExamenFinal {
     
     public static void piramide(){
         Scanner in = new Scanner(System.in);
-        int n , filaA = 0, espacio, asterisco;
+        int n , filaA, espacio, asterisco, contador = 0;
         System.out.print("Ingrese el tamaño de la pirámide: ");
         n = in.nextInt();
         
-        for(filaA = 1; filaA <= (n-2); filaA++){
+        for(filaA = 1; filaA < (n+1-contador); filaA++){
+            contador += 1;
             for(espacio = 0; espacio <= n-filaA; espacio++){
                 System.out.print(" ");
             }
-            for(asterisco = 0; asterisco < (filaA*2)-3; asterisco++){
+            for(asterisco = 0; asterisco < (filaA*2)-1; asterisco++){
                 System.out.print("*");
             }
             System.out.println("");
